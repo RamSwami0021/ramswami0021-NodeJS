@@ -1,7 +1,7 @@
 # Ram Swami Portfolio 🔥
 ### www.ramswami0021.netlify.app 
 
-### personal website
+### Personal website
 
 Check out this [live demo](www.ramswami0021.netlify.app) to see website in action.
 
@@ -46,7 +46,7 @@ Check out this [live demo](www.ramswami0021.netlify.app) to see website in actio
 ✔️ Skills & Certificates\
 ✔️ Education & Experience\
 ✔️ Recently Work\
-✔️ Contact Info\
+✔️ Contact Info
 
 
 
