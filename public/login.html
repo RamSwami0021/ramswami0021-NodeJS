@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ram Swami - Portfolio Dashboard</title>
+	<meta name="description" content="RamSwami0021 - Portfolio">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="/images/doted_ram.png">
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/all.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/slick.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div id="preloader" class="light">
+	<div class="outer">
+		<!-- Google Chrome -->
+		<div class="infinityChrome">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+		<!-- Safari and others -->
+		<div class="infinity">
+			<div>
+				<span></span>
+			</div>
+			<div>
+				<span></span>
+			</div>
+			<div>
+				<span></span>
+			</div>
+		</div>
+		<!-- Stuff -->
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+					<feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+					<feBlend in="SourceGraphic" in2="goo" />
+				</filter>
+			</defs>
+		</svg>
+	</div>
+</div>
+
+
+<!-- main layout -->
+<main class="content-2">
+	
+	<!-- section home -->
+	<section id="home" class="home d-flex light align-items-center">
+		<div class="container">
+            <div class="container">
+			
+                <!-- section title -->
+                <h2 class="section-title wow fadeInUp">Login Here</h2>
+                <h3 class="wow fadeInUp">Only for admin (user:admin, password:admin)</h3>
+    
+                <div class="spacer" data-height="60"></div>
+                
+                <div class="row">
+    
+                    <div class="col-md-12">
+                        <form id="contact-form" class="contact-form mt-6" method="post" action="/contact_form">
+                            
+                            <div class="messages"></div>
+                            
+                            <div class="row">
+                                <div class="column col-md-8">
+                                    <!-- Name input -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="User Name" required="required" data-error="User Name is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="column col-md-8">
+                                    <!-- Email input -->
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="required" data-error="Password is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button name="login" type="login" value="Login" id="login" class="btn btn-default" onclick="thankYouMsg()">Sign In</button><!-- Send Button -->
+    
+                        </form>
+                        <!-- Contact Form end -->
+                    </div>
+    
+                </div>
+    
+            </div>
+		</div>
+		
+	</section>
+	
+</main>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<!-- SCRIPTS -->
+<script>
+	function thankYouMsg() {
+	  var name = document.getElementById("name").value;
+	  alert("Thank You "+name+" for contact us.")
+	}
+	</script>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/infinite-scroll.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/morphext.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
