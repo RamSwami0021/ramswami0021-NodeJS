@@ -48,7 +48,7 @@ Check out this [live demo](www.ramswami0021.netlify.app) to see website in actio
 * <b>GitHub Pages</b> - To host my static website (HTML, CSS, JS).
 * <b>Netlify</b> - To Live my static website (HTML, CSS, JS).
 
-## How to Set Up Your Copy of Ramswami Portfolio 📦
+## How to Set Up Your Copy of RamSwami Portfolio 📦
 
 ### OPTION 1 - Run Ramswami Portfolio on your machine
 
