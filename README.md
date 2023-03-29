@@ -97,8 +97,6 @@ Check out this [live demo](www.ramswami0021.netlify.app) to see website in actio
      ```
      npm start
      ```
-   * Start the server with nodemon, which will automatically restart the application when you make any changes. This starts the NodeGoat application at [http://localhost:8080/](http://localhost:8080/):
-     ```
 
 #### Customizing the Default Application Configuration
 
