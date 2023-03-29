@@ -93,7 +93,7 @@ Check out this [live demo](www.ramswami0021.netlify.app) to see website in actio
    ```
    By default this will use the "development" configuration, but the desired config can be passed as an argument if required.
 7) Start the server. You can run the server using node or nodemon:
-   * Start the server with node. This starts the NodeGoat application at [http://localhost:8080/](http://localhost:8080/):
+   * Start the server with node. This starts the NodeGoat application at [http://localhost:8080](http://localhost:8080/):
      ```
      npm start
      ```
