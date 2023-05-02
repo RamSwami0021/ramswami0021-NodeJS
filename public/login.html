@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button name="login" type="login" value="Login" id="login" class="btn btn-default" onclick="thankYouMsg()">Sign In</button><!-- Send Button -->
+                            <button name="login" type="submit" value="Login" id="login" class="btn btn-default" onclick="thankYouMsg()">Sign In</button><!-- Send Button -->
     
                         </form>
                         <!-- Contact Form end -->
@@ -114,11 +114,46 @@
 
 <!-- SCRIPTS -->
 <script>
+	// Get a reference to the login form
+	const loginForm = document.getElementById('contact-form');
+  
+	// Listen for the form to be submitted
+	loginForm.addEventListener('submit', (event) => {
+	  // Prevent the default form submission behavior
+	  event.preventDefault();
+  
+	  // Get the values of the username and password fields
+	  const username = document.getElementById('username').value;
+	  const password = document.getElementById('password').value;
+  
+	  // Make an HTTP POST request to the server
+	  $.ajax({
+		type: 'POST',
+		url: 'http://localhost:8080/api/login',
+		data: {
+		  username: username,
+		  password: password
+		},
+		success: function(response) {
+		  // Handle the successful login response
+		  console.log(response);
+		  location.href = '../listContactUs.html'
+		  alert('Logged in successfully!');
+		},
+		error: function(xhr, status, error) {
+		  // Handle the login error
+		  console.error(error);
+		  alert('Login failed. Please try again.');
+		}
+	  });
+	});
+  </script>
+<script>
 	function thankYouMsg() {
 	  var name = document.getElementById("name").value;
 	  alert("Thank You "+name+" for contact us.")
 	}
-	</script>
+</script>
 <script src="js/jquery-1.12.3.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
