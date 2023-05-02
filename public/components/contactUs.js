@@ -18,11 +18,8 @@ class ContactUs extends HTMLElement{
 									href="mailto:ramswami0021@gmail.com">email</a>. 👋</p>
 							<a href="login.html" target="_blank">
 								<button name="login" type="login" value="login" id="login" class="btn btn-default">
-									Login Here (only admin)</button> </a>
+									Login Here (only DEMO Dashboard)</button> </a>
 						</div>
-						<a href="listContactUs.html" target="_blank">
-							<button name="login" type="login" value="login" id="login" class="btn btn-default"> List of
-								Contact Us </button> </a>
 					</div>
 
 					<div class="col-md-8">
