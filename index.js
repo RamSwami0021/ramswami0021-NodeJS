@@ -40,27 +40,23 @@ app.post('/sign_up',function(req,res){
     });
  });
 
-app.post('/sign_in', function(req,res){
-    let token=req.cookies.auth;
-    User.findByToken(token,(err,user)=>{
-        if(err) return  res(err);
-        if(user) return res.status(400).json({
-            error :true,
-            message:"You are already logged in"
-        });
-    
-        else{
-            User.findOne({'username':req.body.username},function(err,user){
-                if(!user) return res.json({isAuth : false, message : ' Auth failed ,email not found'});
-        
-                user.comparepassword(req.body.password,(err,isMatch)=>{
-                    if(!isMatch) return res.json({ isAuth : false,message : "password doesn't match"});
-
-            });
-          });
-        }
-    });
-});
+ const users = [
+    { id: 1, username: 'admin', password: 'admin' },
+  ];
+  
+  // Login endpoint
+  app.post('/api/login', (req, res) => {
+    // Find user with matching username and password
+    const { username, password } = req.body;
+    const user = users.find(u => u.username === username && u.password === password);
+  
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid username or password' });
+    }
+  
+    // Return user data to client
+    res.json({ id: user.id, username: user.username });
+  });
 
 app.post("/contact_form",(req,res)=>{
     var name = req.body.name;
@@ -86,7 +82,14 @@ app.post("/contact_form",(req,res)=>{
 
 })
 
-
+app.get('/api/contact/list', (req, res) => {
+    const collection = db.collection("ContactUs");
+    
+      // Find all documents in the users collection
+      collection.find({}).toArray((err, docs) => {
+        res.send(docs);
+      });
+  });
 
 app.get("/",(req,res)=>{
     res.set({
@@ -94,6 +97,7 @@ app.get("/",(req,res)=>{
     })
     return res.redirect('index.html');
 }).listen(8080);
+
 
 
 console.log("Listening on PORT 8080");
